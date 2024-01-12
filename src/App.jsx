@@ -18,7 +18,7 @@ function App() {
         <UserStorage>
           <Header />
           <Routes>
-            <Route path="/Dogs-react/*" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
             <Route
               path="conta/*"

@@ -5,7 +5,7 @@ export function TOKEN_POST(body) {
     url: API_URL + '/jwt-auth/v1/token',
     options: {
       method: 'POST',
-      header: {
+      headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
@@ -18,7 +18,7 @@ export function TOKEN_VALIDATE_POST(token) {
     url: API_URL + '/jwt-auth/v1/token/validate',
     options: {
       method: 'POST',
-      header: {
+      headers: {
         'Content-Type': 'application/json',
         Authorization: 'Bearer ' + token,
       },
@@ -31,7 +31,7 @@ export function USER_GET(token) {
     url: API_URL + '/api/user',
     options: {
       method: 'GET',
-      header: {
+      headers: {
         Authorization: 'Bearer ' + token,
       },
     },
@@ -43,7 +43,7 @@ export function USER_POST(body) {
     url: API_URL + '/api/user',
     options: {
       method: 'POST',
-      header: {
+      headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(body),
@@ -56,7 +56,7 @@ export function PHOTO_POST(formData, token) {
     url: API_URL + '/api/photo',
     options: {
       method: 'POST',
-      header: {
+      headers: {
         Authorization: 'Bearer ' + token,
       },
       body: formData,

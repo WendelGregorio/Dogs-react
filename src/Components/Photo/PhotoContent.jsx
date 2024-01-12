@@ -4,6 +4,7 @@ import PhotoComments from './PhotoComments'
 import { Link } from 'react-router-dom'
 import { UserContext } from '../../Context/UserContext'
 import PhotoDelete from './PhotoDelete'
+import Image from '../Helper/Image'
 
 function PhotoContent({ data }) {
   const user = React.useContext(UserContext)
@@ -12,7 +13,7 @@ function PhotoContent({ data }) {
   return (
     <div className={styles.photo}>
       <div className={styles.img}>
-        <img src={photo.src} alt={photo.title} />
+        <Image src={photo.src} alt={photo.title} />
         <div className={styles.details}>
           <div>
             <p className={styles.author}>

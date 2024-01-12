@@ -13,7 +13,7 @@ function useFetch() {
       setError(null)
       setLoading(true)
       response = await fetch(url, options)
-      json = response.json()
+      json = await response.json()
       if (response.ok === false) throw new Error(json.message)
     } catch (err) {
       json = null

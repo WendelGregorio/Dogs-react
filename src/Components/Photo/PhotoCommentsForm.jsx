@@ -2,12 +2,12 @@ import React from 'react'
 import Enviar from '../../Assets/enviar.svg?react'
 import useFetch from '../../Hooks/useFetch'
 import Error from '../Helper/Error'
-import styles from './PhotoCommentsForm.module.css'
 import { COMMENT_POST } from '../../api/api'
+import styles from './PhotoCommentsForm.module.css'
 
-function PhotoCommentsForm({ id, setComments }) {
+const PhotoCommentsForm = ({ id, setComments, single }) => {
   const [comment, setComment] = React.useState('')
-  const { request, error, loading, data } = useFetch()
+  const { request, error } = useFetch()
 
   async function handleSubmit(event) {
     event.preventDefault()
@@ -20,7 +20,10 @@ function PhotoCommentsForm({ id, setComments }) {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form
+      className={`${styles.form} ${single ? styles.single : ''}`}
+      onSubmit={handleSubmit}
+    >
       <textarea
         className={styles.textarea}
         id="comment"

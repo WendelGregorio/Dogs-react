@@ -1,17 +1,17 @@
 import React from 'react'
 import styles from './PhotoContent.module.css'
-import PhotoComments from './PhotoComments'
 import { Link } from 'react-router-dom'
+import PhotoComments from './PhotoComments'
 import { UserContext } from '../../Context/UserContext'
 import PhotoDelete from './PhotoDelete'
 import Image from '../Helper/Image'
 
-function PhotoContent({ data }) {
+const PhotoContent = ({ data, single }) => {
   const user = React.useContext(UserContext)
   const { photo, comments } = data
 
   return (
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${single ? styles.single : ''}`}>
       <div className={styles.img}>
         <Image src={photo.src} alt={photo.title} />
       </div>
@@ -21,7 +21,7 @@ function PhotoContent({ data }) {
             {user.data && user.data.username === photo.author ? (
               <PhotoDelete id={photo.id} />
             ) : (
-              <Link to={`/perfil/${photo.author}`}>@{photo.autho}</Link>
+              <Link to={`/perfil/${photo.author}`}>@{photo.author}</Link>
             )}
             <span className={styles.visualizacoes}>{photo.acessos}</span>
           </p>
@@ -34,7 +34,7 @@ function PhotoContent({ data }) {
           </ul>
         </div>
       </div>
-      <PhotoComments id={photo.id} comments={comments} />
+      <PhotoComments single={single} id={photo.id} comments={comments} />
     </div>
   )
 }

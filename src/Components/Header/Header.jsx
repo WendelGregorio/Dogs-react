@@ -10,15 +10,19 @@ function Header() {
   return (
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
-        <Link className={styles.logo} to="/Dogs-react" aria-label="Dogs - Home">
+        <Link
+          className={styles.logo}
+          to="/Dogs-react/"
+          aria-label="Dogs - Home"
+        >
           <Dogs />
         </Link>
         {data ? (
-          <Link className={styles.login} to="/conta">
+          <Link className={styles.login} to="/Dogs-react/conta">
             {data.nome}
           </Link>
         ) : (
-          <Link className={styles.login} to="/login">
+          <Link className={styles.login} to="/Dogs-react/login">
             {data && data.email}
             Login / Criar
           </Link>

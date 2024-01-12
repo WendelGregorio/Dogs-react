@@ -18,10 +18,10 @@ function App() {
         <UserStorage>
           <Header />
           <Routes>
-            <Route path="/Dogs-react" element={<Home />} />
-            <Route path="login/*" element={<Login />} />
+            <Route path="/Dogs-react/" element={<Home />} />
+            <Route path="/Dogs-react/login/*" element={<Login />} />
             <Route
-              path="conta/*"
+              path="/Dogs-react/conta/*"
               element={
                 <ProtectedRoute>
                   <User />

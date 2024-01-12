@@ -35,15 +35,15 @@ function UserHeaderNav() {
           mobileMenu && styles.navMobileActive
         }`}
       >
-        <NavLink to="/conta" end>
+        <NavLink to="/Dogs-react/conta" end>
           <MinhasFotos />
           {mobile && 'Minhas Fotos'}
         </NavLink>
-        <NavLink to="/conta/estatisticas">
+        <NavLink to="/Dogs-react/conta/estatisticas">
           <Estatisticas />
           {mobile && 'Estatísticas'}
         </NavLink>
-        <NavLink to="/conta/postar">
+        <NavLink to="/Dogs-react/conta/postar">
           <AdicionarFoto />
           {mobile && 'Adicionar Foto'}
         </NavLink>

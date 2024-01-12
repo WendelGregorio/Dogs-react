@@ -20,7 +20,8 @@ function FeedPhotos({ setModalPhoto }) {
 
   if (error) return <Error error={error} />
   if (loading) return <Loading />
-  if (data)
+  if (data) {
+    console.log(data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
         {data.map((photo) => (
@@ -32,7 +33,7 @@ function FeedPhotos({ setModalPhoto }) {
         ))}
       </ul>
     )
-  else return null
+  } else return null
 }
 
 export default FeedPhotos

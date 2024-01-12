@@ -18,7 +18,7 @@ export function UserStorage({ children }) {
       setLoading(false)
       setLogin(false)
       window.localStorage.removeItem('token')
-      navigate('/login')
+      navigate('/Dogs-react/login')
     },
     [navigate],
   )
@@ -41,7 +41,7 @@ export function UserStorage({ children }) {
       const { token } = await tokenRes.json()
       window.localStorage.setItem('token', token)
       await getUser(token)
-      navigate('/conta')
+      navigate('/Dogs-react/conta')
     } catch (err) {
       setError(err.message)
       setLogin(false)

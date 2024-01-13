@@ -15,26 +15,31 @@ import NotFound from './Components/NotFound/NotFound'
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Head title="Dogs" />
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <Routes>
-            <Route path="/Dogs-react/" element={<Home />} />
-            <Route path="/Dogs-react/login/*" element={<Login />} />
-            <Route
-              path="/Dogs-react/conta/*"
-              element={
-                <ProtectedRoute>
-                  <User />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/Dogs-react/foto/:id" element={<Photo />} />
-            <Route path="/Dogs-react/perfil/:user" element={<UserProfile />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/Dogs-react/" element={<Home />} />
+              <Route path="/Dogs-react/login/*" element={<Login />} />
+              <Route
+                path="/Dogs-react/conta/*"
+                element={
+                  <ProtectedRoute>
+                    <User />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="/Dogs-react/foto/:id" element={<Photo />} />
+              <Route
+                path="/Dogs-react/perfil/:user"
+                element={<UserProfile />}
+              />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>

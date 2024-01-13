@@ -14,10 +14,10 @@ function User() {
     <section className="container">
       <UserHeader />
       <Routes>
-        <Route path="/Dogs-react/" element={<Feed user={data.id} />} />
-        <Route path="/Dogs-react/postar" element={<UserPhotoPost />} />
-        <Route path="/Dogs-react/estatisticas" element={<UserStats />} />
-        <Route path="/Dogs-react/*" element={<NotFound />} />
+        <Route path="/" element={<Feed user={data.id} />} />
+        <Route path="postar" element={<UserPhotoPost />} />
+        <Route path="estatisticas" element={<UserStats />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </section>
   )

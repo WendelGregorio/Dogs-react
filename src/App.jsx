@@ -11,6 +11,7 @@ import ProtectedRoute from './Components/Helper/ProtectedRoute'
 import Head from './Components/Head/Head'
 import Photo from './Components/Photo/Photo'
 import UserProfile from './Components/User/UserProfile'
+import NotFound from './Components/NotFound/NotFound'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             />
             <Route path="/Dogs-react/foto/:id" element={<Photo />} />
             <Route path="/Dogs-react/perfil/:user" element={<UserProfile />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>

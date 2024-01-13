@@ -10,6 +10,7 @@ import User from './Components/User/User'
 import ProtectedRoute from './Components/Helper/ProtectedRoute'
 import Head from './Components/Head/Head'
 import Photo from './Components/Photo/Photo'
+import UserProfile from './Components/User/UserProfile'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               }
             />
             <Route path="/Dogs-react/foto/:id" element={<Photo />} />
+            <Route path="/Dogs-react/perfil/:user" element={<UserProfile />} />
           </Routes>
           <Footer />
         </UserStorage>

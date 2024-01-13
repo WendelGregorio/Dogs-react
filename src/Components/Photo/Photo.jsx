@@ -5,7 +5,7 @@ import { PHOTO_GET } from '../../api/api'
 import Error from '../Helper/Error'
 import Loading from '../Helper/Loading'
 import PhotoContent from './PhotoContent'
-import Head from '../Head'
+import Head from '../Head/Head'
 
 const Photo = () => {
   const { id } = useParams()

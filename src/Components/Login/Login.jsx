@@ -15,10 +15,10 @@ function Login() {
     <section className={styles.login}>
       <div className={styles.forms}>
         <Routes>
-          <Route path="/Dogs-react/" element={<LoginForm />} />
-          <Route path="/Dogs-react/criar" element={<LoginCreate />} />
-          <Route path="/Dogs-react/perdeu" element={<LoginPasswordLost />} />
-          <Route path="/Dogs-react/resetar" element={<LoginPasswordReset />} />
+          <Route path="/" element={<LoginForm />} />
+          <Route path="/criar" element={<LoginCreate />} />
+          <Route path="/perdeu" element={<LoginPasswordLost />} />
+          <Route path="/resetar" element={<LoginPasswordReset />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
